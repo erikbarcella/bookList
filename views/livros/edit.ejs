@@ -1,0 +1,44 @@
+<%- include('../partials/head') %>
+
+<% if(livro) { %>
+    <h2>Detalhes do Livro</h2>
+
+    <%
+        let autores = "";
+        if (livro.authors){
+            for (let i = 0; i < livro.authors.length; i++){
+                autores += livro.authors[i];
+                if(i < livro.authors.length - 1) {
+                    autores += ', ';
+                } else {
+                    autores += '.';
+                }
+            }
+        }
+    %>
+
+    <div class="livro">
+        <img src="<%= livro.thumbnail ? livro.thumbnail : '../../imgs/transparent.png' %>">
+        <p>Título: <%= livro.title %></p>
+        <p>Autores: <%= autores %></p>
+        <div>
+            <% if(livro.industryIdentifiers) { 
+                for (isbn of livro.industryIdentifiers) { %>
+                    <p><%=isbn.type%>: <%=isbn.identifier%>.</p>
+                <%} 
+            } %>
+        </div>
+        <form action="/livros/<%= livro._id %>?_method=PATCH" method="post">
+            <p>Comentário: 
+                <input type="text" name="comment" size="55" value="<%= livro.comment %>">    
+            </p>
+            <button class="botoes">Salvar alteração</button>
+        </form>
+        <a href="/livros/<%= livro._id %>"><button class="botoes">Cancelar</button></a>
+    </div>
+
+<% } else { %>
+    <h2>Livro não encontrado</h2>
+<% } %>
+<a href="/livros/<%= livro._id %>"><p id="voltar">Voltar</p></a>
+<%- include('../partials/footer') %>

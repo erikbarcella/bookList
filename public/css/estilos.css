@@ -1,0 +1,86 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3{
+    margin: 20px;
+    text-align: center;
+}
+
+h1{
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-bottom: 70px;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.menu{
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    margin-top: -15px;
+}
+
+.item-menu{
+    margin-right: 20px;
+}
+
+footer{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.center{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.busca{
+    margin: 20px;
+}
+
+.livro{ 
+    border: 2px solid black;
+    margin: 0 auto 20px auto;
+    width: 680px;
+    height: 205px;
+    text-align: left;
+}
+
+.livro img{ 
+    float: left;
+    margin: 10px;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#voltar{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.adicionar{
+    float: right;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.botoes{
+    float: right;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+
+.titulo{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 25px;
+}

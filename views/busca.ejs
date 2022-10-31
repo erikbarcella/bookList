@@ -1,0 +1,20 @@
+<%- include('partials/head') %>
+
+<div class='busca'>
+    <h2>Busque o livro pelo ISBN</h2>
+    <form class="center" action="/buscaISBN" method="GET">
+        <input type="text" name="isbn" id="isbn">
+        <button>Buscar</button>
+    </form>
+</div>
+<br/>
+<div class='busca'>
+    <h2>Busque o livro pelo Título</h2>
+    <form class="center" action="/buscaTitulo" method="GET">
+        <input type="text" name="titulo" id="titulo">
+        <button>Buscar</button>
+    </form>
+</div>
+
+
+<%- include('partials/footer') %>

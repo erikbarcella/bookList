@@ -1,0 +1,14 @@
+<%- include('../partials/head') %>
+
+<h2>Meus Livros</h2>
+
+<% if(livros.length > 0) { %>
+    <% for(livro of livros) {  %>
+        <a href="/livros/<%= livro._id %>"><p class="titulo"><%= livro.title %></p></a>
+    <% } %>
+<% } else { %>
+    <h3>Sua lista está vazia.</h3>
+<% } %>
+
+<a href="/"><p id="voltar">Voltar</p></a>
+<%- include('../partials/footer') %>
