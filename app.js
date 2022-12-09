@@ -5,15 +5,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const Livro = require('./models/livro');
 const methodOverride = require('method-override');
-
-mongoose.connect('mongodb://localhost:27017/dbLivros', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log("Conexão estabelecida com o banco!");
-    })
-    .catch(err => {
-        console.log("Erro ao conectar com o banco...");
-        console.log(err);
-    })
+const connectDatabase = require('./database/db');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -105,6 +97,6 @@ app.delete('/livros/:id', async(req, res) => {
     await Livro.findByIdAndDelete(id);
     res.redirect('/livros');
 });
-
+connectDatabase();
 let porta = 3030;
 app.listen(porta, () => console.log("Servidor ligado na porta "+porta));
