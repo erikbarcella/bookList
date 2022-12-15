@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const Livro = require('./models/livro');
 const methodOverride = require('method-override');
 const connectDatabase = require('./database/db');
+require('dotenv').config();
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -98,5 +99,5 @@ app.delete('/livros/:id', async(req, res) => {
     res.redirect('/livros');
 });
 connectDatabase();
-let porta = 3030;
-app.listen(porta, () => console.log("Servidor ligado na porta "+porta));
+
+app.listen(process.env.EXPRESS_PORT, () => console.log("Servidor ligado na porta "+process.env.EXPRESS_PORT));
