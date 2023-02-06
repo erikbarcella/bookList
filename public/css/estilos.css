@@ -1,5 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url("/imgs/fundo.png")
 }
 
 h1, h2, h3{
@@ -15,6 +16,7 @@ h1{
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
+    
 }
 
 .menu{
@@ -22,10 +24,13 @@ h1{
     font-size: 1.3em;
     margin-bottom: 40px;
     margin-top: -15px;
+    
 }
 
 .item-menu{
     margin-right: 20px;
+    border-radius: 7px;
+    background-color: beige;
 }
 
 footer{
@@ -49,6 +54,7 @@ footer{
     width: 680px;
     height: 205px;
     text-align: left;
+    background-color: beige;
 }
 
 .livro img{ 
@@ -83,4 +89,8 @@ a{
     text-align: center;
     text-decoration: underline;
     margin-top: 25px;
+}
+
+.titulo{
+    background-color: beige;
 }
